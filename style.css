@@ -37,7 +37,7 @@ body {
  /*---long-quote class is when the qute is very big. so we add this class dynamically when the quote length is big. this class will make the font size smaller to 1rem instead of the default quote-text size of 1.5 rem---*/
 .long-quote { 
   font-size: 1rem;
-  color: red;
+  /* color: red; */
  }
 
  /* increasing the font-size of the " icon */
