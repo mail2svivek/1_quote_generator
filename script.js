@@ -19,7 +19,8 @@ function loading(){
 function complete(){
  if(!loaderEle.hidden){
   loaderEle.hidden=true
-  quoteContainer.hidden=false }
+  quoteContainer.hidden=false 
+ }
 }
 
 async function getQuoteForismatic(){
