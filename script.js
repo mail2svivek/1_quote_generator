@@ -17,7 +17,7 @@ function loading(){
 //Hide Loading
 
 function complete(){
- if(!loaderEle.hideen){
+ if(!loaderEle.hidden){
   loaderEle.hidden=true
   quoteContainer.hidden=false }
 }
