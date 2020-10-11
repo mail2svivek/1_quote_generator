@@ -45,7 +45,7 @@ async function getQuoteForismatic(){
  } catch(error){
   
   console.log('whoops, no quote', error)
-  getQuoteForismatic()
+  //getQuoteForismatic()
  }
 
 }
