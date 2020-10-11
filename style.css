@@ -58,17 +58,58 @@ body {
 
 /* Format the Buttons */
 .button-container{
- border: 2px magenta solid;
+ /* border: 2px magenta solid; */
  margin-top: 1rem;
  display:flex; /* initiate flexbox*/
- justify-content: space-between;
+ /* poistion the buttons on the left and right edges of the container. Use justify-content*/
+ justify-content: space-between; 
  
 }
 
+/* Format the buttons*/
+button{
+ cursor:pointer; /* when you hover on the button the cursor should change*/
+ font-size: 0.9rem; /*font size in the button*/
+ height: 2.0rem; /* height of the button*/
+ border: none;
+ border-radius: 10px;/* make the buttons slightly round*/
+ background-color:#333;
+ color: #fff;
+ outline: none; /* remove the outline when you click the button*/
+ padding: 0.5rem 1.25rem; /* add padding of 0.5rem atop bottom and 1.5 rem leftright*/
+ box-shadow: 0 0.3rem rgba(121,121,121,0.65)
+}
 
-/*Media Query to be added to the bottom of the css script*/
+/* hover effect on the button so that it changes the color*/
+
+button:hover {
+ /* you can brighten the button when you hover with filer brightness*/
+ filter:brightness(130%); 
+ /*OR you can change the color to lighter tint with background color*/
+ /* background-color:#555; */
+}
+
+/* Effect of Button press . Use psuedoclass active*/
+
+button:active{
+ /* Use transform translate & move the button by 0 rem on Horizontal Axis and 0.3 rem on the Vertical axis*/
+ /* translate(move_on_horizontalaxis, move_on_verticalaxis)*/
+ transform: translate(0,0.3rem);
+ /* reset the box-shadow You can do 0rem 0rem or 0,0.1rem*/
+ box-shadow: 0 0.1rem rgba(255,255,255,0.65);
+}
+
+.twitter-button:hover{
+ /* On Hover: change the twitter icon color to official color #38a1f3*/
+ color:#38a1f3;
+}
+
+.fa-twitter {
+ font-size: 1.1rem;
+}
+/* Media Query to be added to the bottom of the css script*/
 /* Media Query: Tablet or Smaller size :to add a padding for smaller screens*/
-/*Media Query to target only screens upto a maximum width of 1000 px.*/ 
+/* Media Query to target only screens upto a maximum width of 1000 px.*/ 
 /* That is for screens smaller then 1000 pm plz apply this media querry*/
 @media screen and (max-width: 1000px) {
  .quote-text {
