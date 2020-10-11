@@ -1,6 +1,10 @@
 
 // Get Quote from API
-
+const quoteContainer = document.getElementById('quote-container')
+const quoteText=document.getElementById('quote')
+const authorName=document.getElementById('author')
+const twitterBtn = document.getElementById('twitter')
+const newQuoteBtn = document.getElementById('new-quote')
 
 async function getQuoteForismatic(){
  const proxyUrl='https://cors-anywhere.herokuapp.com/'
@@ -9,8 +13,11 @@ async function getQuoteForismatic(){
  let quoteResp = await fetch(proxyUrl + apiUrl)
  let quoteJSON = await quoteResp.json()
  console.log(quoteJSON)
+ quoteText.innerHTML = quoteJSON.quoteText
+
+ authorName.innerHTML = quoteJSON.quoteAuthor
  } catch(error){
-  getQuoteForismatic()
+  //getQuoteForismatic()
   console.log('whoops, no quote', error)
  }
 
