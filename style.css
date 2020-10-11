@@ -72,7 +72,7 @@ body {
 /* That is for screens smaller then 1000 pm plz apply this media querry*/
 @media screen and (max-width: 1000px) {
  .quote-text {
-  /* color: red; */
+  color: red;
   font-size: 1.2rem
  }
  .quote-container {
