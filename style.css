@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 html {
  /* prevents padding from adding extra width and height. page is stretched/ reduced to fit the browser window */
  box-sizing: border-box; 
@@ -6,6 +8,66 @@ html {
 body {
  margin:0;
  min-height: 100vh;
- background-color: #c6c1f8;
- background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cg fill='%23002bf4' fill-opacity='0.12'%3E%3Cpath d='M12 0h18v6h6v6h6v18h-6v6h-6v6H12v-6H6v-6H0V12h6V6h6V0zm12 6h-6v6h-6v6H6v6h6v6h6v6h6v-6h6v-6h6v-6h-6v-6h-6V6zm-6 12h6v6h-6v-6zm24 24h6v6h-6v-6z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+ background-color: #e7e6f3;
+ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cg fill='%236b7fda' fill-opacity='0.20'%3E%3Cpath d='M12 0h18v6h6v6h6v18h-6v6h-6v6H12v-6H6v-6H0V12h6V6h6V0zm12 6h-6v6h-6v6H6v6h6v6h6v6h6v-6h6v-6h6v-6h-6v-6h-6V6zm-6 12h6v6h-6v-6zm24 24h6v6h-6v-6z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+ color: black;
+ font-family: Montserrat, sans-serif;
+ font-weight: 700;
+ text-align: center;
+ display: flex;
+ align-items: center;     /* vertical alignment */
+ justify-content: center; /* horizontal alignment */
  }
+
+.quote-container{
+  border: 1px red solid;
+  width: auto; /* box to be centered in the middle of the screen */
+  max-width:900px; /* box should not go across the screen. It should be smaller*/
+  padding: 1.5em 2.5em; /* add some padding so that the text does not stick to the edges of the box*/
+  border-radius: 1em; /* to make box edges round*/
+  background-color: rgba(255,255,255,0.4);/* box which is slightly see-through 255,255,255 is white with opacity of 0.4*/
+  box-shadow: 0.5em 1.0em 0.75em 0.6em rgba(0,0,0,0.3); /* creates a shadow around the box with 0.5em horizontal shift and 1.0em vertical shift 0.75em blur and 0.6em radius with 0,0,0 black rgba of black 0,0,0 and opacity of 0.3*/
+ }
+
+.quote-text {
+  font-size: 1.5rem; /* setting font size on rems instead of pixels to make it responsive. 1 rem is equal to the font size of the html element which by default is 16pixels. so 1.5 rem = 16*1.5 = 24px*/ 
+  border: 1px red solid;
+ }
+
+ /*---long-quote class is when the qute is very big. so we add this class dynamically when the quote length is big. this class will make the font size smaller to 1rem instead of the default quote-text size of 1.5 rem---*/
+.long-quote { 
+  font-size: 1rem;
+  color: red;
+ }
+
+ /* increasing the font-size of the " icon */
+.fa-quote-left {
+ /* color: red; */
+ font-size: 1.75rem;/*font size is increase*/
+}
+
+/* Format the Author Text */
+.quote-author {
+ /* border: 1px green solid; */
+ color:red;
+ margin-top: 1em;
+ font-size: 1.2rem; 
+ font-weight:400;
+ font-style: italic;
+}
+
+/*Media Query to be added to the bottom of the css script*/
+/* Media Query: Tablet or Smaller size :to add a padding for smaller screens*/
+/*Media Query to target only screens upto a maximum width of 1000 px.*/ 
+/* That is for screens smaller then 1000 pm plz apply this media querry*/
+@media screen and (max-width: 1000px) {
+ .quote-text {
+  /* color: red; */
+  font-size: 1.2rem
+ }
+ .quote-container {
+  /* border: 2px blue solid; */
+  margin: auto 1em; /* Center it vertically & add a padding of 1em on left & right*/  
+ }
+ 
+}
