@@ -32,6 +32,18 @@ async function getQuoteForismatic(){
 
 }
 
+function tweetQuote(){
+ const quote= quoteText.innerText
+ const authot = quoteText.innerText
+ const twitterBaseUrl='https://twitter.com/intent/tweet'
+ const twitterUrl=`${twitterBaseUrl}?text=${quote} - ${author}`
+ window.open(twitterUrl,'_blank')
+}
+
+//Event Listeners
+
+twitterBtn.addEventListener('click', tweetQuote)
+
 newQuoteBtn.addEventListener('click', getQuoteForismatic)
 //Onload
 
