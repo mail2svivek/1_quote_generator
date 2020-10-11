@@ -13,9 +13,9 @@ async function getQuoteForismatic(){
  let quoteResp = await fetch(proxyUrl + apiUrl)
  let quoteJSON = await quoteResp.json()
  console.log(quoteJSON)
- quoteText.innerHTML = quoteJSON.quoteText
+ quoteText.innerText = quoteJSON.quoteText
 
- authorName.innerHTML = quoteJSON.quoteAuthor
+ authorName.innerText = quoteJSON.quoteAuthor
  } catch(error){
   //getQuoteForismatic()
   console.log('whoops, no quote', error)
@@ -23,7 +23,7 @@ async function getQuoteForismatic(){
 
 }
 
-
+newQuoteBtn.addEventListener('click', getQuoteForismatic)
 //Onload
 
 getQuoteForismatic()
