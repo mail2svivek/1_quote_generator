@@ -43,8 +43,9 @@ async function getQuoteForismatic(){
    //Stop loader and call complete It will hide the loader and show the container
    hideLoadingSpinner()
  } catch(error){
-  getQuoteForismatic()
+  
   console.log('whoops, no quote', error)
+  getQuoteForismatic()
  }
 
 }
