@@ -26,7 +26,7 @@ async function getQuoteForismatic(){
    quoteText.classList.remove('long-quote')
   }
  } catch(error){
-  getQuoteForismatic()
+  //getQuoteForismatic()
   console.log('whoops, no quote', error)
  }
 
