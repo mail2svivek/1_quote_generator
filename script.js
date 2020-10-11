@@ -13,12 +13,17 @@ async function getQuoteForismatic(){
  let quoteResp = await fetch(proxyUrl + apiUrl)
  let quoteJSON = await quoteResp.json()
  console.log(quoteJSON)
- quoteText.innerText = quoteJSON.quoteText
  
  if (quoteJSON.quoteAuthor===''){
   authorName.innerText="Unknown"
    }else {
    authorName.innerText = quoteJSON.quoteAuthor
+  }
+  quoteText.innerText = quoteJSON.quoteText
+  if (quoteJSON.quoteText.length > 120 ){
+   quoteText.classList.add('long-quote')
+  } else {
+   quoteText.classList.remove('long-quote')
   }
  } catch(error){
   //getQuoteForismatic()

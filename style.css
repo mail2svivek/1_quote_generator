@@ -20,7 +20,7 @@ body {
  }
 
 .quote-container{
-  border: 1px red solid;
+  /* border: 1px red solid; */
   width: auto; /* box to be centered in the middle of the screen */
   max-width:900px; /* box should not go across the screen. It should be smaller*/
   padding: 1.5em 2.5em; /* add some padding so that the text does not stick to the edges of the box*/
@@ -113,7 +113,7 @@ button:active{
 /* That is for screens smaller then 1000 pm plz apply this media querry*/
 @media screen and (max-width: 1000px) {
  .quote-text {
-  color: red;
+  /* color: red; */
   font-size: 1.2rem
  }
  .quote-container {
