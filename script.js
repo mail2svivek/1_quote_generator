@@ -7,16 +7,12 @@ const twitterBtn = document.getElementById('twitter')
 const newQuoteBtn = document.getElementById('new-quote')
 const loaderEle = document.getElementById('loader')
 
-//Show loading
-function loading(){
+function showLoadingSpinner(){
  loaderEle.hidden=false
  quoteContainer.hidden=true
 }
 
-
-//Hide Loading
-
-function complete(){
+function hideLoadingSpinner(){
  if(!loaderEle.hidden){
   loaderEle.hidden=true
   quoteContainer.hidden=false 
@@ -24,7 +20,7 @@ function complete(){
 }
 
 async function getQuoteForismatic(){
- loading()
+  showLoadingSpinner()
  const proxyUrl='https://cors-anywhere.herokuapp.com/'
  const apiUrl ='http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json'
  try {
@@ -45,7 +41,7 @@ async function getQuoteForismatic(){
    }
    quoteText.innerText = quoteJSON.quoteText
    //Stop loader and call complete It will hide the loader and show the container
-   complete()
+   hideLoadingSpinner()
  } catch(error){
   //getQuoteForismatic()
   console.log('whoops, no quote', error)
