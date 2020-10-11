@@ -20,7 +20,7 @@ async function getQuoteForismatic(){
    authorName.innerText = quoteJSON.quoteAuthor
   }
   quoteText.innerText = quoteJSON.quoteText
-  if (quoteJSON.quoteText.length > 120 ){
+  if (quoteJSON.quoteText.length > 50 ){
    quoteText.classList.add('long-quote')
   } else {
    quoteText.classList.remove('long-quote')
