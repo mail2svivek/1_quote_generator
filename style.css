@@ -31,7 +31,7 @@ body {
 
 .quote-text {
   font-size: 1.5rem; /* setting font size on rems instead of pixels to make it responsive. 1 rem is equal to the font size of the html element which by default is 16pixels. so 1.5 rem = 16*1.5 = 24px*/ 
-  border: 1px red solid;
+  /* border: 1px red solid; */
  }
 
  /*---long-quote class is when the qute is very big. so we add this class dynamically when the quote length is big. this class will make the font size smaller to 1rem instead of the default quote-text size of 1.5 rem---*/
@@ -49,12 +49,22 @@ body {
 /* Format the Author Text */
 .quote-author {
  /* border: 1px green solid; */
- color:red;
+ /* color:red; */
  margin-top: 1em;
- font-size: 1.2rem; 
+ font-size: 1rem; 
  font-weight:400;
  font-style: italic;
 }
+
+/* Format the Buttons */
+.button-container{
+ border: 2px magenta solid;
+ margin-top: 1rem;
+ display:flex; /* initiate flexbox*/
+ justify-content: space-between;
+ 
+}
+
 
 /*Media Query to be added to the bottom of the css script*/
 /* Media Query: Tablet or Smaller size :to add a padding for smaller screens*/
