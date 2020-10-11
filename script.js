@@ -9,7 +9,7 @@ const loaderEle = document.getElementById('loader')
 
 //Show loading
 function loading(){
- loaderEle.hdden=false
+ loaderEle.hidden=false
  quoteContainer.hidden=true
 }
 
@@ -18,9 +18,8 @@ function loading(){
 
 function complete(){
  if(!loaderEle.hideen){
-  quoteContainer=false
-  loaderEle.hdden=true
- }
+  loaderEle.hidden=true
+  quoteContainer.hidden=false }
 }
 
 async function getQuoteForismatic(){
