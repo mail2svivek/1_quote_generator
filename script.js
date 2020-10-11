@@ -14,8 +14,12 @@ async function getQuoteForismatic(){
  let quoteJSON = await quoteResp.json()
  console.log(quoteJSON)
  quoteText.innerText = quoteJSON.quoteText
-
- authorName.innerText = quoteJSON.quoteAuthor
+ 
+ if (quoteJSON.quoteAuthor===''){
+  authorName.innerText="Unknown"
+   }else {
+   authorName.innerText = quoteJSON.quoteAuthor
+  }
  } catch(error){
   //getQuoteForismatic()
   console.log('whoops, no quote', error)
